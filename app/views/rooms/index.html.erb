@@ -17,13 +17,14 @@
 
    <tbody>
    <% @rooms.each do |room| %>
-     <tr>
-       <td><%= room.image %></td>
-       <td><%= room.room_name %></td>
-       <td><%= room.details %></td>
-       <td><%= room.price %></td>
-       <td><%= room.created_at.to_s(:datetime_jp)%></td>
-     </tr>
+  <tr>
+
+  <%= room.image %>
+  <td><%= room.room_name %></td>  
+  <td><%= room.details %></td>
+  <td><%= room.price %></td>
+  <td><%= room.created_at.to_s(:datetime_jp)%></td>
+  </tr>
    <% end %>
  </tbody>
 </table>

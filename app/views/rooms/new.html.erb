@@ -15,17 +15,18 @@
 <td><%= f.text_field :price %></td>
 </tr>
 <tr>
-<th><%= f.label :address , "住所" %></th>
+<th><%= f.label :address ,"住所" %></th>
 <td><%= f.text_field :address %></td>
 </tr>
 
 </table>
 
-<%= form_with model: @comment, local: true  do |form| %>
-    <%= form.text_area :content %><br>
-    <%= form.file_field :image %><br>
-    <%= form.submit %>
+<%= form_with model: @room, local: true  do |form| %>
+  <%= form.file_field :image %><br>
+  <%= form.submit %>
 <% end %>
+
+
 
 <div>
      <ul>
