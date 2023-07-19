@@ -1,0 +1,37 @@
+<h3>予約一覧</h3>
+
+<table>
+   <thead>
+     <tr>
+       <th>画像</th>
+       <th>施設名</th>
+       <th>紹介文</th>
+       <th>料金</th>
+       <th>チェックイン</th>
+       <th>チェックアウト</th>
+       <th>予約確定日時</th>
+     </tr>
+   </thead>
+
+   <tbody>
+   <% @rooms.each do |room| %>
+  <tr>
+  <%= room.image %>
+  <td><%= room.room_name %></td>  
+  <td><%= room.details %></td>
+  <td><%= room.price %></td>
+  </tr>
+   <% end %>
+
+   <% @reservations.each do |reservation| %>
+   <tr>
+   <td><%= reservation.check_in %></td>
+   <td><%= reservation.check_out %></td>
+   <td><%= reservation.created_at.to_s(:datetime_jp)%></td>
+   </tr>
+ <% end %>
+ </tbody>
+</table>
+
+<p><%= link_to "施設予約", :new_reservation %></p>
+
